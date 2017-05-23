@@ -3,10 +3,11 @@
 \usepackage[french, english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-%\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
-%\usepackage{setspace}
-\graphicspath{Images/}
+\usepackage{setspace}
+\graphicspath{{Images/}
+\geometry{legalpaper}}
 
 \begin{document}
 \begin{titlepage} 
@@ -38,7 +39,10 @@ Dans le cadre du cour \textit{Principes de dynamique et méthodes numériques}, 
 \section{Design de la glissade}
 Le devis émit par le WOQ demandais de calculer la trajectoire d'un glissade passant absolument pas des points cartésiens précis. Comme le montre la tableau 1, la glissade doit passer par tout les points.
 
-\includegraphics[scale=1]{tableau1}
+\begin{center}
+	\includegraphics[scale=0.8]{tableau1}
+\end{center}
+Les valeurs de ce tableau sont les points de référence pour le approximation de la courbe de la glissade.
 
 \subsection{Calculs}
 
