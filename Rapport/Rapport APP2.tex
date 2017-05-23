@@ -84,11 +84,28 @@ V_p' = \frac{m_p.V_p + m_b.V_b}{(m_b + m_p).V_b'}
 \begin{equation}
 V_p' = 5.06m/s
 \end{equation}
-\subsection{calcul de la marge de maneuvre}
-
+Donc, le temps requis pour traverser complètement la trappe est:
+\begin{equation}
+t_m = \frac{l_{trappe}}{V_p'} = 0,59 sec
+\end{equation}
 
 \section{Design de la minuterie}
+Le devis avait un requis d'une marge de maneuvre de $0,02sec$ pour assurer la sécurité des participants concernant la trappe. Lorsque le ballon est attrapé, les temps est de $0,52sec$ et lorsque le ballon rebondit, le temps est de $0,59sec$.
 \subsection{Calculs}
+\begin{equation}
+t_{m_f} < \Delta T_m - 0,02
+\end{equation}
+\begin{center}
+et
+\end{center}
+\begin{equation}
+t_{m_r} > \Delta T_m + 0,02
+\end{equation}
+
+Suite aux manipulations algébriques, le résultat est que 
+\begin{equation}
+\Delta T_m \approx 0,056 sec
+\end{equation}
 
 \section{Design du Coussin-Tampoline}
 \subsection{Calculs}
