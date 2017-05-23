@@ -2,10 +2,9 @@
 \usepackage[margin=3.0cm]{geometry}
 \usepackage[french, english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
-
+\usepackage{graphicx}
 \graphicspath{{Images/}
 \geometry{legalpaper}}
 
@@ -50,11 +49,13 @@ g(x) = A(1) + A(2)\times x + A(3)\times x^2 + A(4)\times x^3 + A(5)\times x^4
 Où $A$ est le vecteur des coefficient des polynômes obtenu par la méthode de la projection orthogonale avec la pseudo-inverse. 
 \newpage
 \noindent
-Une fois les polynômes trouver ($E_y$ allant de 10 à 15 par bon de 0,01), il faut choisir une des courbe qui assure la sécurité des participants. Le devis mention que: "La valeur de yf doit assurer une sortie de glissade à peu près horizontale (exigence qualitative) pour assurer une transition naturelle avec la surface horizontale de la trappe." On peut alors dire qu'il faut que la dérivé du polynôme soit le plus près de 0. 
+Une fois les polynômes trouver ($E_y$ allant de 10 à 15 par bon de 0,01), il faut choisir une des courbe qui assure la sécurité des participants. Le devis mentionne que: "La valeur de yf doit assurer une sortie de glissade à peu près horizontale (exigence qualitative) pour assurer une transition naturelle avec la surface horizontale de la trappe." On peut alors dire qu'il faut que la dérivé du polynôme soit le plus près de 0. 
 \begin{equation}
 \frac{dg(x)}{dx} = 0
 \end{equation}
-L'estimation a été accomplie avec le logiciel de calcul Matlab et le résultat obtenu est que la valeur de $E_y = 12.27m$. 
+L'estimation a été accomplie avec le logiciel de calcul Matlab et le résultat obtenu est que la valeur de $E_y = 12.27m$. Ce qui donne la courbe présenté sur la figure 1.
+
+\includegraphics[width=\textwidth]{figure1}
 
 \section{Design du débit d'eau}
 \subsection{Calculs}
@@ -110,7 +111,7 @@ t_m = \frac{l_{trappe}}{V_p'} = 0,59 sec
 \end{equation}
 
 \section{Design de la minuterie}
-Le devis avait un requis d'une marge de maneuvre de $0,02sec$ pour assurer la sécurité des participants concernant la trappe. Lorsque le ballon est attrapé, les temps est de $0,52sec$ et lorsque le ballon rebondit, le temps est de $0,59sec$.
+Le devis avait un requis d'une marge de maneuvre de $0,02sec$ pour assurer la sécurité des participants concernant la trappe. Lorsque le ballon est attrapé, les temps est de $0,52sec$ et lorsque le ballon rebondit, le temps est de $0,59sec$. $\Delta T_m$ est le temps pour peu importe le cas avec le participant et le ballon.
 \subsection{Calculs}
 \begin{equation}
 t_{m_f} < \Delta T_m - 0,02

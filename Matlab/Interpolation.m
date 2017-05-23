@@ -15,4 +15,9 @@ plot(xp,yf,'o');
         g = g + A(j)*x.^(j-1);
     end
 plot(x,g);
+title("Courbe de la glissade")
+ylabel("Hauteur (m)")
+xlabel("Distance (m)")
+ylim ([0 30])
+grid on 
 hold off
