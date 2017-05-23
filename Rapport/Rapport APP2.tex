@@ -61,14 +61,31 @@ Et selon les standard imposés, la minutrie devait avoir une marge de manoeuvre 
 \delta t_m \approx{0,54 - 0,02} = 0,52sec
 \end{equation}
 \subsection{Ballon non attrapé}
-Dans cette situation, le participant entre en collision avec le ballon sans l'attrapé. La collision entre le ballon-mousse et le participant à ce moment là est une collision plastique. Selon les requis du devis de WOQ, nous considérons le coefficient de récupération de $0,8$.
+Dans cette situation, le participant entre en collision avec le ballon sans l'attrapé. La collision entre le ballon-mousse et le participant à ce moment là est une collision plastique. Selon les requis du devis de WOQ, nous considérons le coefficient de récupération de $0,8$. Les valeurs de $V_{p_n}$ = 6.25$m/s$ et $V_{b_n}$ = -1.0$m/s$
 \begin{equation}
 e <= 0,8 = \frac{V'_{b_n} - V'_{p_n}}{V_{p_n} - V_{b_n}}
 \end{equation}
 suite a des manipulations algébrique, le résultat est:
 \begin{equation}
-{V_{p_n} - V_{b_n}} = 
+{V_{b_n} - V_{p_n}} = 5,8
 \end{equation}
+\begin{equation}
+V_b' = 5,8 + V_p'
+\end{equation}
+Il y a aussi l'équation suivante:
+\begin{equation}
+m_p.V_p + m_b.V_b = m_p.V_p' + m_b.V_b'
+\end{equation}
+\noindent
+en substituant l'équation trouvé précédement, on obtien:
+\begin{equation}
+V_p' = \frac{m_p.V_p + m_b.V_b}{(m_b + m_p).V_b'}
+\end{equation}
+\begin{equation}
+V_p' = 5.06m/s
+\end{equation}
+\subsection{calcul de la marge de maneuvre}
+
 
 \section{Design de la minuterie}
 \subsection{Calculs}

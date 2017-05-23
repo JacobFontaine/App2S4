@@ -9,14 +9,12 @@ g = 9.81;   %m/s^2.
 h = 10;     %m.
 
 Ffin = 1.10;
-Ve = sqrt((m.*g.*(Kf-1)/b));
-syms dv;
-d_dv = diff(dv);
+Vi = abs(sqrt(2.*g.*h));
+Ve = abs(sqrt((m.*g.*(Kf-1)/b)));
 
-dz = (m.*d_dv)/((-g.*(Kf-1)/Ve.^2)+(b/m.*dv));
+syms zf;
 
-
-
-
-
-
+i = 4.9644;
+j = ((-g/Ve.^2).*(Kf-1) + (b/m)).*zf;
+r1 = solve(j == i);
+disp(double(r1));
