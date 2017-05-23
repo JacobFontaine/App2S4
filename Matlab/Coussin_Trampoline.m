@@ -21,7 +21,7 @@ kc = 6000;
 
 
 Vig = m*g*hi;
-eqn = Vig - (1/2 * kc * hc.^2 + m*g*hf);
+eqn = -Vig + (1/2 * kc * hc.^2 + m*g*hf);
 
 solved = solve(eqn, hc);
 
