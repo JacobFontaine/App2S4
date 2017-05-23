@@ -62,7 +62,7 @@ L'estimation a été accomplie avec le logiciel de calcul Matlab et le résultat
 
 
 \section{Design du débit d'eau}
-Le débit d'eau est un pourcentage d'ouverture d'une valve d'eau
+Pour trouver le débit d'eau du parcours, il faut trouver la vitesse du participant sans frottement pour déterminer s'il faut y appliquer un coefficient de frottement et si c'est nécessaire, il faut déterminer ce coefficient.
 \subsection{Calculs}
 \subsubsection{Vitesse sans frottement}
 Afin de valider si le participant sortent dans la bonne tranche de vitesse, soit entre $20km/h$ et $25km/h$, il faut d'abord vérifier sa vitesse de sortie sans frottement. Le théorème d'énergie mécanique sans frottement correspond à celui-ci, 
@@ -114,10 +114,14 @@ En isolant $v_f^2$, l'équation devient,
 v_f = \sqrt{\frac{2 \times (m \times g \times h_0 - m \times g \times h_f)}{m}}
 \end{equation}
 En évaluant l'équation, la vitesse du participant est donnée en $m/s$, donc il faut multiplier la valeur par $3,6$ afin d'avoir des $km/h$. La vitesse au point E est la suivante,
+\newline
 \begin{center}
 	\includegraphics[scale=0.8]{valeurvfsansfrottement}
 \end{center}
-
+Le participant va à $v_f = 67,14km/h$ en arrivant au point E, beaucoup plus rapide que demandé. Afin d'y remédier, il faut trouver un coefficient de frottement.
+\subsubsection{Vitesse avec frottement}
+Pour trouver le coefficient, il faut 
+\subsubsection{Vitesse du participant durant le parcours}
 \begin{center}
 	\includegraphics[width=\textwidth]{figure2}
 \end{center}
