@@ -15,14 +15,20 @@ for z = 3:10
     end
     M=11-z;
     sum=0;
+    sum_G_Ymoy = 0;
+    sum_Yn_Ymoy = 0;
+    Ymoy = mean(yf);
     for i =1:10
      sum = sum+((g(i)-yf(i)).^2); 
+     sum_G_Ymoy = sum_G_Ymoy + ((g(i)-Ymoy).^2);
+     sum_Yn_Ymoy = sum_Yn_Ymoy + ((yf(i) - Ymoy).^2);
     end
     y = sqrt((1/11)*sum);
+    R = sum_G_Ymoy ./ sum_Yn_Ymoy;
     subplot(4,2,z-2);
     hold on
     plot(x,g);
-    xlabel(['M=',num2str(M),' RMS=',num2str(y)]);
+    xlabel(['M=',num2str(M),' RMS=',num2str(y),' R=',num2str(R)]);
     scatter(xp,yf);
     hold off
 end
