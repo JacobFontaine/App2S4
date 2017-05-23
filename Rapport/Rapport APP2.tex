@@ -3,9 +3,8 @@
 \usepackage[french, english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
+%\usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
-\usepackage{setspace}
 \graphicspath{{Images/}
 \geometry{legalpaper}}
 
@@ -118,8 +117,59 @@ Suite aux manipulations algébriques, le résultat est que
 \end{equation}
 
 \section{Design du Coussin-Tampoline}
+En ce qui concerne le design du Coussin-Trampoline, le devis fournit toutes les informations nécessaires pour déterminer la déformation totale du coussin-trampoline. Sachant que $k_c = 6000N/m$ et que le participant-ballon, d'une masse de $m = 88kg$ tombe d'une hauteur $h_0$ de $5 m$. Sachant que le coussin va avoir une déformation de $h_c$, la chute totale du participant-ballon est de $\Delta h = h_0 + h_c$. La vitesse horizontale du participant-ballon n'affecte pas sa vitesse verticale, seule la gravité va affecter sa vitesse.
 \subsection{Calculs}
-
+Sachant que,
+\begin{equation}
+T_i + V_{gi} + V_{ri} = T_f + V_{gf} + V_{rf}
+\end{equation}
+Où,
+\begin{equation}
+T_i = 0
+\end{equation}
+\begin{equation}
+V_{ri} = 0
+\end{equation}
+\begin{equation}
+T_f = 0
+\end{equation}
+\newline
+Au début de la chute, la vitesse verticale du participant-ballon est nulle. À la fin de la chute, la vitesse verticale du participant est nulle, puisque le coussin-trampoline a amorti la chute. Aussi, la déformation du coussin-trampoline est nulle, donc il n'y a aucune énergie potentielle de ressort. 
+\newline
+\newline
+Donc, le théorème d'énergie mécanique après simplification devient,
+\begin{equation}
+V_{gi} = V_{gf} + V_{rf} 
+\end{equation}
+Sachant que,
+\begin{equation}
+V_{gi} = m \times g \times h_0 
+\end{equation}
+\begin{equation}
+V_{gf} = m \times g \times h_c 
+\end{equation}
+\begin{equation}
+V_{rf} = \frac{1}{2} \times k_c \times h_c^2
+\end{equation}
+\newline
+En substituant les équations de chacun des composants du théorème, l'équation devient,
+\begin{equation}
+m \times g \times h_0 = m \times g \times h_c + \frac{1}{2} \times k_c \times h_c^2
+\end{equation}
+\newline
+\newline
+Il est possible de transformer cette équation en équation quadratique.
+\begin{equation}
+0 = \frac{1}{2} \times k_c \times h_c^2 + m \times g \times h_c - m \times g \times h_0
+\end{equation}
+\newline
+En résolvant l'équation quadratique, la valeur de $h_c$ est obtenue.
+\subsection{Résultats}
+La résolution d'une quadratique donne deux valeurs. Les deux valeurs obtenues sont affichées ci-bas.
+\begin{center}
+	\includegraphics[scale=0.8]{valeurhc}
+\end{center}
+Puisqu'il s'agit d'une compression d'un ressort, la valeur de la distance de compression doit être négative. Donc, la valeur de $h_c = -1,3520m$.
 \section{Design du Bassin}
 \subsection{Calculs}
 
