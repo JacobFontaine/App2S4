@@ -3,6 +3,7 @@
 \usepackage[french, english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \graphicspath{{Images/}
@@ -55,10 +56,18 @@ Une fois les polynômes trouver ($E_y$ allant de 10 à 15 par bon de 0,01), il f
 \end{equation}
 L'estimation a été accomplie avec le logiciel de calcul Matlab et le résultat obtenu est que la valeur de $E_y = 12.27m$. Ce qui donne la courbe présenté sur la figure 1.
 
-\includegraphics[width=\textwidth]{figure1}
+\begin{center}
+	\includegraphics[width=\textwidth]{figure1}
+\end{center}
+
 
 \section{Design du débit d'eau}
 \subsection{Calculs}
+
+\begin{center}
+	\includegraphics[width=\textwidth]{figure2}
+\end{center}
+
 
 \section{Design du Ballon-mousse}
 \subsection{Ballon Attrapé}
@@ -246,6 +255,14 @@ Nous intégrons maintenant les 2 côtés:
 \begin{equation}
 \int_{0.1V_E}^{V_I-V_E}\frac{\delta \Delta V}{\Delta V} = \int_{0}^{z_f} (-\frac{g}{V_E^2}(K_f-1)+ \frac{B}{m})\delta z
 \end{equation}
+\begin{equation}
+\int_{0.1V_E}^{V_I-V_E}\frac{\delta \Delta V}{\Delta V} = (-\frac{g}{V_E^2}(K_f-1)+ \frac{B}{m})z_f
+\end{equation}
+La variable $V_I$ représente la vitesse initiale du participant lorsqu'il entre dans l'eau. En sachant que la hauteur h est de 10m, il est calculé grâce à:
+\begin{equation}
+V_I = \sqrt{2gh}=14 m/s
+\end{equation}
+$\Delta z$ est alors calculé grâce à MatLab, et le résultat de la profondeur du bassin est de 4.23m
 \section{Conclusion}
 
 
