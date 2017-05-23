@@ -17,9 +17,3 @@ Ec0 = 0;
 vf = sqrt(((Ep0-Epf).*2)/m);
 
 disp(vf.*3.6);
-
-Ecf = 0.5.*m.*Ve.^2;
-
-W = Ep0 + Ec0 - Epf - Ecf ;
-disp(W);
-%W = muFcos(theta);%%

@@ -57,8 +57,61 @@ Une fois les polynômes trouver ($E_y$ allant de 10 à 15 par bon de 0,01), il f
 L'estimation a été accomplie avec le logiciel de calcul Matlab et le résultat obtenu est que la valeur de $E_y = 12.27m$. 
 
 \section{Design du débit d'eau}
+Le débit d'eau est un pourcentage d'ouverture d'une valve d'eau
 \subsection{Calculs}
-
+\subsubsection{Vitesse sans frottement}
+Afin de valider si le participant sortent dans la bonne tranche de vitesse, soit entre $20km/h$ et $25km/h$, il faut d'abord vérifier sa vitesse de sortie sans frottement. Le théorème d'énergie mécanique sans frottement correspond à celui-ci, 
+\begin{equation}
+T_i + V_{gi} = T_f + V_{gf}
+\end{equation}
+Sachant que,
+\begin{equation}
+g = 9.81m/s^2
+\end{equation}
+\begin{equation}
+m = 80kg
+\end{equation}
+\begin{equation}
+h_0 = 30m
+\end{equation}
+\begin{equation}
+h_f = 12,27m
+\end{equation}
+\begin{equation}
+v_i = 0m/s
+\end{equation}
+\begin{equation}
+v_f = ?m/s
+\end{equation}
+Et que,
+\begin{equation}
+T_i = \frac{1}{2} \times m \times v_i^2
+\end{equation}
+\begin{equation}
+T_f = \frac{1}{2} \times m \times v_f^2
+\end{equation}
+\begin{equation}
+V_{gi} = m \times g \times h_0
+\end{equation}
+\begin{equation}
+V_{gf} = m \times g \times h_f
+\end{equation}
+Au début du parcours, la vitesse du participant est nulle, $v_i = 0$, donc $T_i = 0$. Le théorème devient,
+\begin{equation}
+V_{gi} = T_f + V_{gf}
+\end{equation}
+En substituant les équations des énergies dans le théorème, l'équation devient,
+\begin{equation}
+m \times g \times h_0 = \frac{1}{2} \times m \times v_f^2 + m \times g \times h_f
+\end{equation}
+En isolant $v_f^2$, l'équation devient,
+\begin{equation}
+v_f = \sqrt{\frac{2 \times (m \times g \times h_0 - m \times g \times h_f)}{m}}
+\end{equation}
+En évaluant l'équation, la vitesse du participant est donnée en $m/s$, donc il faut multiplier la valeur par $3,6$ afin d'avoir des $km/h$. La vitesse au point E est la suivante,
+\begin{center}
+	\includegraphics[scale=0.8]{valeurvfsansfrottement}
+\end{center}
 \section{Design du Ballon-mousse}
 \subsection{Ballon Attrapé}
 Dans cette situation, on présume que le participant attrape le ballon-mousse. Donc, on peut assumer alors qu'il y a une fusion du ballon-mousse et le participant après l'impacte en ceux-ci? Donc cela se résume à l'équation suivante:
