@@ -5,6 +5,10 @@
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
+<<<<<<< HEAD
+%\usepackage{setspace}
+=======
+>>>>>>> 533b4bf26b7053984ab5221273aa8f2b38d96354
 \graphicspath{{Images/}
 \geometry{legalpaper}}
 
@@ -182,7 +186,68 @@ La résolution d'une quadratique donne deux valeurs. Les deux valeurs obtenues s
 Puisqu'il s'agit d'une compression d'un ressort, la valeur de la distance de compression doit être négative. Donc, la valeur de $h_c = -1,3520m$.
 \section{Design du Bassin}
 \subsection{Calculs}
-
+L'équation différentielle linéarisée sera faite avec la méthode longue, car l'équation d'équilibre est demandé. Les étapes seront donc détaillés ci-dessous.
+\newline
+\newline
+Étape 1: Équation à l'équilibre: On pose tout d'abord notre équation à linéariser: 
+\begin{equation}
+m\frac{\delta v}{\delta t} = K_fmg-mg+BV^2
+\end{equation}
+On transforme notre dérivé selon z, et on simplifie:  
+\begin{equation}
+m\frac{\delta v}{\delta z} = \frac{mg}{V}(K_f-1)+BV
+\end{equation}
+Par la suite, on met l'équation en équilibre:
+\begin{equation}
+0 = \frac{mg}{V_E}(K_f-1)+BV_E
+\end{equation}
+Étape 2: Linéarisation des termes non linéaires avec une série de Taylor d'ordre 1. On a un seul terme non linéaires, et une seule sortie. Donc:
+\begin{equation}
+\frac{mg}{V}(K_f-1) = \frac{mg}{V_E}(K_f-1) - (\frac{mg}{V_E^2}(K_f-1)(V-V_E)
+\end{equation}
+Étape 3: On remplacement maintenant les termes linéarisés dans l'équation originale:
+\begin{equation}
+m\frac{\delta v}{\delta z} = \frac{mg}{V_E}(K_f-1) - (\frac{mg}{V_E^2}(K_f-1)(V-V_E)+BV
+\end{equation}
+Étape 4: On change alors les variables en terme de variation autours de l'équilbre. En sachant que :
+\begin{equation}
+V= V_E + \Delta V
+\end{equation}
+On pose: 
+\begin{equation}
+m\frac{\delta (V_E + \Delta V)}{\delta z} = \frac{mg}{V_E}(K_f-1) - (\frac{mg}{V_E^2}(K_f-1)((V_E + \Delta V)-V_E)+B(V_E + \Delta V)
+\end{equation}
+\begin{equation}
+m\frac{\delta \Delta V}{\delta z} = \frac{mg}{V_E}(K_f-1) - (\frac{mg}{V_E^2}(K_f-1) \Delta V)+BV_E + B\Delta V
+\end{equation}
+Étape 5: Finalement, on soustrait l'équation d'équilibre:
+\begin{equation}
+m\frac{\delta \Delta V}{\delta z} = - (\frac{mg}{V_E^2}(K_f-1) \Delta V)+ B\Delta V
+\end{equation}
+Ceci est donc notre équation différentielle linéarisée.
+\newline
+\newline
+Pour trouver $V_E$, on prend notre équation à l'équilibre, et on isole $V_E$.
+\begin{equation}
+0 = \frac{mg}{V_E}(K_f-1)+BV_E
+\end{equation}
+\begin{equation}
+V_E = \sqrt{\frac{-mg(K_F-1)}{B}}
+\end{equation} 
+\begin{equation}
+V_E = 0.9137m/sec
+\end{equation}  
+Finalement, on recherche la profondeur du bassin. Donc en partant de notre équation différentielle linéarisée, on isole les $\Delta V$ et les z: 
+\begin{equation}
+m\frac{\delta \Delta V}{\delta z} = - (\frac{mg}{V_E^2}(K_f-1) \Delta V)+ B\Delta V
+\end{equation}
+\begin{equation}
+\frac{\delta \Delta V}{\Delta V} =  (-\frac{g}{V_E^2}(K_f-1)+ \frac{B}{m})\delta z
+\end{equation}
+Nous intégrons maintenant les 2 côtés:
+\begin{equation}
+\int_{0.1V_E}^{V_I-V_E}\frac{\delta \Delta V}{\Delta V} = \int_{0}^{z_f} (-\frac{g}{V_E^2}(K_f-1)+ \frac{B}{m})\delta z
+\end{equation}
 \section{Conclusion}
 
 
