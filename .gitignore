@@ -3,3 +3,5 @@
 *.toc
 *.out
 *.dvi
+*.log
+*.txt
