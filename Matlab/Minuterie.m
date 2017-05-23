@@ -1,7 +1,7 @@
 close all;
 clear all;
 
-% Variables global.
+%% Variables global.
 Vp = 6.25;          % valeur trouver de la vitesse de sorti du participant à l'aide du coefficient mu de la valve et l'eau verser.
 Vb = -1;
 mb = 8;
