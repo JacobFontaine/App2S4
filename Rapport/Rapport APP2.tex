@@ -3,7 +3,7 @@
 \usepackage[french, english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
+%\usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
 
 \graphicspath{{Images/}
@@ -245,6 +245,14 @@ Nous intégrons maintenant les 2 côtés:
 \begin{equation}
 \int_{0.1V_E}^{V_I-V_E}\frac{\delta \Delta V}{\Delta V} = \int_{0}^{z_f} (-\frac{g}{V_E^2}(K_f-1)+ \frac{B}{m})\delta z
 \end{equation}
+\begin{equation}
+\int_{0.1V_E}^{V_I-V_E}\frac{\delta \Delta V}{\Delta V} = (-\frac{g}{V_E^2}(K_f-1)+ \frac{B}{m})z_f
+\end{equation}
+La variable $V_I$ représente la vitesse initiale du participant lorsqu'il entre dans l'eau. En sachant que la hauteur h est de 10m, il est calculé grâce à:
+\begin{equation}
+V_I = \sqrt{2gh}=14 m/s
+\end{equation}
+$\Delta z$ est alors calculé grâce à MatLab, et le résultat de la profondeur du bassin est de 4.23m
 \section{Conclusion}
 
 
