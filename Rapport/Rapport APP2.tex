@@ -222,10 +222,22 @@ Donc,
 \end{center}
 Puisque la valve ne peut pas avoir une ouverture supérieure à $100\%$, la valeur de l'ouverture pour un coefficient $\mu_f = 0,6296$ est de $30,9459\%$.
 \subsubsection{Vitesse avec frottement du participant durant le parcours}
+Afin de déterminer la vitesse du participant sur le trajet, il faut utiliser le polynôme d'interpolation de la hauteur, puisque la hauteur du participant varie selon la distance horizontale du trajet.
+\newline
+\newline
+Donc, pour commencer, la hauteur du participant est donnée par,
+\begin{equation}
+h(x) = A(1) + A(2)\times x + A(3)\times x^2 + A(4)\times x^3 + A(5)\times x^4
+\end{equation}
+L'équation $27$ est la même représentation du théorème d'énergie mécanique pour la vitesse, donc il est possible d'isoler la $v_f$ pour avoir la vitesse finale en tout temps selon la position horizontale,
+\begin{equation}
+v_f = \sqrt{2(-g((h(x)-h_0)+\mu_fgx))}
+\end{equation}
+Cette équation évaluée entre $x = 0$ à $x = 25$ donne le graphique suivant de la vitesse,
 \begin{center}
 	\includegraphics[width=\textwidth]{figure2}
 \end{center}
-
+La vitesse du participant doit se situer entre $v = 10km/h$ et $v = 45km/h$ et cette contrainte est respectée en tout temps.
 
 \section{Design du Ballon-mousse}
 \subsection{Ballon Attrapé}
@@ -422,6 +434,6 @@ V_I = \sqrt{2gh}=14 m/s
 \end{equation}
 $\Delta z$ est alors calculé grâce à MatLab, et le résultat de la profondeur du bassin est de 4.23m
 \section{Conclusion}
-
+Pour conclure, chacune des spécifications du devis sur la réalisation du parcours de wipe-out a été respecté. La sortie du participant de la glissade est d'une vitesse de $22,5km/h$, sa vitesse n'est jamais en-dessous de $v=10km/h$ ou au-dessus de $v=45km/h$. Sa chute dans l'eau le ralenti pour ne pas qu'il se blesse. Donc, le parcours est sécuritaire.
 
 \end{document}
