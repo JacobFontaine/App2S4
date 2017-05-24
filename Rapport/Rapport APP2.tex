@@ -109,7 +109,7 @@ En substituant les équations des énergies dans le théorème, l'équation devi
 \begin{equation}
 m \times g \times h_0 = \frac{1}{2} \times m \times v_f^2 + m \times g \times h_f
 \end{equation}
-En isolant $v_f^2$, l'équation devient,
+En isolant $v_f$, l'équation devient,
 \begin{equation}
 v_f = \sqrt{\frac{2 \times (m \times g \times h_0 - m \times g \times h_f)}{m}}
 \end{equation}
@@ -119,9 +119,109 @@ En évaluant l'équation, la vitesse du participant est donnée en $m/s$, donc i
 	\includegraphics[scale=0.8]{valeurvfsansfrottement}
 \end{center}
 Le participant va à $v_f = 67,14km/h$ en arrivant au point E, beaucoup plus rapide que demandé. Afin d'y remédier, il faut trouver un coefficient de frottement.
-\subsubsection{Vitesse avec frottement}
-Pour trouver le coefficient, il faut 
-\subsubsection{Vitesse du participant durant le parcours}
+\subsubsection{Ordre et coefficients du polynôme d'approximation de $\mu_{f}$}
+Différents coefficients de frottement sont obtenus selon le pourcentage d'ouverture de la valve d'eau. Afin de trouver le pourcentage d'ouverture de la valve pour avoir le coefficient de frottement $\mu_f$ obtenu dans la prochaine section, il faut trouver l'ordre et les coefficients du polynome d'approximation.
+\newline
+\newline
+Les valeurs connues de la relation entre l'ouverture de la valve et le coefficient sont indiquées dans le tableau 2 suivant
+\begin{center}
+	\includegraphics[scale=0.8]{tableau2}
+\end{center}
+Puisqu'il s'agit d'une approximation, la relation $N - M \geq 3$ doit être vraie en tout temps. Les polynômes d'approximation peuvent aller de l'ordre $0$ à l'ordre $M - 1$. Puisque,
+\begin{equation}
+N - M \geq 3
+\end{equation}
+\begin{equation}
+M_{max} = N - 3
+\end{equation}
+\begin{equation}
+M_{max} = 8
+\end{equation}
+Donc, l'ordre maximal est de 8.
+\newline
+\newline
+Suite à ceci, puisqu'il y a plusieurs possibilités d'ordre, il faut trouver quel polynôme est le plus précis possible. Le $RMS$ et le facteur $R$ sont des paramètres permettant de déterminer la validité d'une approximation. Le $RMS$ est la marge d'erreur entre des valeurs exactes et des valeurs approximées au même endroit. Plus le $RMS$ est petit, moins l'erreur est grande. Le facteur $R$ est un facteur qui indique l'exactitude du polynôme et s'il passe le plus possible à travers tous les points précis. Plus sa valeur est proche de $1$, plus l'approximation est exacte.
+\newline
+\begin{center}
+	\includegraphics[width=\textwidth]{polynome}
+\end{center}
+Selon les paramètres $RMS$ et $R$, les polynômes $M = 4$ et $M = 5$ sont les plus précis. Le polynôme $M = 5$ est celui sélectionné pour le reste de la problématique, puisqu'il a une plus petite erreur sur les valeurs pour une perte de précision minime sur le polynôme d'approximation.
+\newline
+\newline
+Donc, le polynôme sélectionné est celui à $M = 5$ d'ordre $4$. Le polynôme est représenté par l'équation suivante,
+\begin{equation}
+g(x) = A(1) + A(2)\times x + A(3)\times x^2 + A(4)\times x^3 + A(5)\times x^4 
+\end{equation}
+\subsubsection{Coefficient de frottement $\mu_{f}$}
+Pour trouver le coefficient, il faut repenser au théorème d'énergie mécanique. Par définition, le frottement est une force qui s'oppose au mouvement entre deux systèmes. Dans le cas du parcours, les deux systèmes sont le participant et la glissade. Pour illustrer le principe du frottement, voici un DCL,
+\begin{center}
+	\includegraphics[scale=0.8]{dcl}
+\end{center}
+Le carré représente le participant et la surface plane en dessous représente la glissade. Comme la définition le dit, un frottement est une force qui s'oppose au déplacement. Il existe deux types de frottements : statique et cinétique. Le frottement statique est la force qui s'oppose complètement au déplacement, donc l'objet ne possède aucune vitesse. Le frottement cinétique est celui qui s'oppose au mouvement ayant une vitesse. Puisque le participant glisse, la force de frottement est opposé à sa vitesse.
+\newline
+\newline
+Une force de frottement cinétique peut être décrite par l'équation suivante,
+\begin{equation}
+f_c = \mu_fN
+\end{equation}
+Où, $\mu_f$ représente son coefficient de frottement cinétique et $N$ représente la normale de l'objet. Donc, sachant que $N$ représente la normale de l'objet, l'équation de la force devient,
+\begin{equation}
+f_c = \mu_fmg
+\end{equation}
+Puisque,
+\begin{equation}
+N = mg
+\end{equation}
+Pour pouvoir adapter le théorème d'énergie mécanique avec la force de frottement, il faut convertir cette force en énergie. Cette énergie est le travail. Or, le travail est par définition, une force sur un déplacement.
+\begin{equation}
+U_{1,2}^{'} = \vec{F} \cdot \vec{d}
+\end{equation}
+Avec cette nouvelle relation, le théorème devient,
+\begin{equation}
+T_i + V_{gi} + U_{1,2}^{'} = T_f + V_{gf}
+\end{equation}
+En isolant $U_{1,2}^{'}$ et puisque $v_i = 0$, donc $T_i = 0$, le théorème devient,
+\begin{equation}
+U_{1,2}^{'} = T_f + V_{gf} - V_{gi}
+\end{equation}
+En substituant les équations dans le théorème, l'équation devient,
+\begin{equation}
+\mu_fmgx = \frac{1}{2}mv_f^2 + mgh_f - mgh_i
+\end{equation}
+Puisque le devis demande le coefficient pour une vitesse de sortie de $22,5km/h$, donc $6,25m/s$, $\mu_c$ peut être isolé,
+\begin{equation}
+\mu_f = \frac{\frac{1}{2}mv_f^2 + mgh_f - mgh_i}{mgx}
+\end{equation}
+L'équation simplifiée devient,
+\begin{equation}
+\mu_f = \frac{\frac{1}{2}v_f^2 + gh_f - gh_i}{gx}
+\end{equation}
+En évaluant avec les valeurs connues,
+\begin{center}
+	\includegraphics[scale=0.8]{valeurmuf}
+\end{center}
+\subsubsection{Pourcentage d'ouverture de la valve}
+Puisque le coefficient de frottement $\mu_f$ est connu et son polynôme d'approximation avec ses coefficients d'approximation, il est possible de déterminer la valeur du pourcentage d'ouverture de la valve.
+\newline
+\newline
+Pour se faire, il faut résoudre l'équation suivante,
+\begin{equation}
+g(x) = A(1) + A(2)\times x + A(3)\times x^2 + A(4)\times x^3 + A(5)\times x^4
+\end{equation}
+Avec,
+\begin{equation}
+g(x) = 0,6296
+\end{equation}
+Donc,
+\begin{equation}
+0,6296 = A(1) + A(2)\times x + A(3)\times x^2 + A(4)\times x^3 + A(5)\times x^4
+\end{equation}
+À l'aide de Matlab, l'équation résolue donne les valeurs suivantes,
+\begin{center}
+	\includegraphics[scale=0.8]{ouverture}
+\end{center}
+Puisque la valve ne peut pas avoir une ouverture supérieure à $100\%$, la valeur de l'ouverture pour un coefficient $\mu_f = 0,6296$ est de $30,9459\%$.
+\subsubsection{Vitesse avec frottement du participant durant le parcours}
 \begin{center}
 	\includegraphics[width=\textwidth]{figure2}
 \end{center}

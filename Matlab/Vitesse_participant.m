@@ -22,7 +22,7 @@ vf = sqrt(((Ep0-Epf).*2)/m);
 Ecf = 0.5.*m.*Ve.^2;
  
 W = Ep0 + Ec0 - Epf - Ecf ;
-u= -(W / (m * -g * 25));
+u= (W / (m * g * 25));
  
     NmoinsM =0;
     A = ApproximationLineaire(xp, yf, NmoinsM);
